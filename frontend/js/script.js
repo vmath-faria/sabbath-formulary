@@ -3,9 +3,9 @@
 
     // ===== CONFIGURAÇÃO DOS ENDPOINTS =====
     // Altere estas URLs para apontar para o seu backend.
-    const API_BASE_URL = 'http://localhost:3000/api'; // Exemplo
-    const ENDPOINT_OPCOES = `${API_BASE_URL}/albuns`;       // GET  -> retorna lista de álbuns
-    const ENDPOINT_CADASTRO = `${API_BASE_URL}/cadastro`;   // POST -> envia dados do formulário
+    const API_BASE_URL = 'http://localhost:8080/sabbath';
+    const ENDPOINT_OPCOES = `${API_BASE_URL}/albuns`;
+    const ENDPOINT_USUARIO = `${API_BASE_URL}/usuarios`;  // POST -> envia dados do formulário
 
     // ===== ELEMENTOS DO DOM =====
     const form = document.getElementById('cadastroForm');
@@ -160,7 +160,7 @@
     // ===== ENVIO DO FORMULÁRIO VIA POST =====
     async function enviarCadastro(dadosFormulario) {
         try {
-            const resposta = await fetch(ENDPOINT_CADASTRO, {
+            const resposta = await fetch(ENDPOINT_USUARIO, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
